@@ -2,6 +2,11 @@
 
 Este proyecto implementa un sistema de Retrieval-Augmented Generation (RAG) para procesar y consultar documentos en español, utilizando un modelo de lenguaje local (Mistral 7B) y una base de datos vectorial (Qdrant).
 
+
+
+# Video demo
+https://youtu.be/tEzuHhTZ5vc
+
 ## Características
 
 - Procesamiento de documentos PDF y Markdown
