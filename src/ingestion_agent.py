@@ -22,6 +22,8 @@ class IngestionAgent:
     def ingest(self) -> bool:
         """
         Run the ingestion pipeline: load, split, embed, insert into Qdrant.
+
+        Returns: bool indicating success or failure
         """
         logger.info("Starting ingestion pipeline...")
 
@@ -39,6 +41,7 @@ class IngestionAgent:
 
     def stats(self):
         """
-        Return collection statistics.
+        Returns:
+          collection statistics.
         """
         return self.vector_store.get_stats()

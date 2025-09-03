@@ -10,8 +10,10 @@ logger = logging.getLogger(__name__)
 def get_llm(provider: str = "local"):
     """
     Factory to return an LLM depending on the provider.
-    provider="local" -> LlamaCpp (Mistral .gguf)
-    provider="groq"  -> Groq API (LLaMA-4 Scout 17B)
+    Args:
+        provider (str): The provider to use for the LLM.
+    Returns:
+        LLM: An instance of the selected LLM.
     """
     if provider == "local":
         logger.info("Using local LlamaCpp model")

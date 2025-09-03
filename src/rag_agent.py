@@ -40,6 +40,16 @@ class RAGAgent:
         self.llm = get_llm(provider)
 
     def _build_prompt(self, context: str, question: str) -> str:
+        """Build the prompt for the LLM.
+
+        Args:
+            context (str): The context from retrieved documents.
+            question (str): The question to ask the LLM.
+
+        Returns:
+            str: The formatted prompt for the LLM.
+        """
+
         return (
             "Eres un asistente útil que responde SIEMPRE en español.\n\n"
             f"Contexto:\n{context}\n\n"
@@ -56,9 +66,14 @@ class RAGAgent:
     def query(self, question: str, region: Optional[str] = None, k: int = 3) -> Dict[str, Any]:
         """
         Perform a RAG query:
-        - Retrieve top-k documents (optionally filtered by region)
-        - Ask the LLM with context
-        - Return structured answer
+
+        Args:
+            question (str): The question to ask the LLM.
+            region (Optional[str]): The region to filter documents (if any).
+            k (int): The number of top documents to retrieve.
+
+        Returns:
+            Dict[str, Any]: The structured answer from the LLM.
         """
         docs = self.vector_store.similarity_search(question, k=k, region=region)
         if not docs:
@@ -68,7 +83,6 @@ class RAGAgent:
                 "pagina_referencia": "N/A",
             }
 
-        # Build context
         context = "\n\n".join(
             f"[{i+1}] {d['metadata'].get('source', 'N/A')} "
             f"(página {d['metadata'].get('page', 'N/A')}):\n{d['page_content']}"
@@ -78,7 +92,7 @@ class RAGAgent:
 
         try:
             if self.provider == "groq":
-                # Call Groq API
+
                 response = self.llm.chat.completions.create(
                     model="meta-llama/llama-4-scout-17b-16e-instruct",
                     messages=[
@@ -89,10 +103,9 @@ class RAGAgent:
                 )
                 raw_output = response.choices[0].message.content
             else:
-                # Local LlamaCpp
+
                 raw_output = self.llm.invoke(prompt) if hasattr(self.llm, "invoke") else self.llm(prompt)
 
-            # Try extracting JSON
             parsed = extract_json(raw_output)
 
             if not parsed:
@@ -111,7 +124,7 @@ class RAGAgent:
                 "pagina_referencia": "N/A",
             }
 
-        # Normalize JSON output
+
         return {
             "respuesta": parsed.get("respuesta", "N/A"),
             "documento_referencia": parsed.get("documento_referencia", "N/A"),
