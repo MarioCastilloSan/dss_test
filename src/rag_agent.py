@@ -46,11 +46,10 @@ class RAGAgent:
             f"Pregunta: {question}\n\n"
             "Instrucciones:\n"
             "1) Devuelve una respuesta detallada en español integrando la información de TODOS los fragmentos relevantes.\n"
-            "2) Resume claramente en qué proyectos fue relevante la chinchilla chinchilla.\n"
-            "3) Devuelve SOLO un objeto JSON con las claves: "
+            "2) Devuelve SOLO un objeto JSON con las claves: "
             '"respuesta", "documento_referencia", "pagina_referencia".\n'
-            "4) Si hay múltiples fragmentos, combínalos en una única 'respuesta'.\n"
-            "5) Si falta información, usa 'N/A'.\n\n"
+            "3) Si hay múltiples fragmentos, combínalos en una única 'respuesta'.\n"
+            "4) Si falta información, usa 'N/A'.\n\n"
             "JSON:\n"
         )
 

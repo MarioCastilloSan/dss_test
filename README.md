@@ -1,6 +1,16 @@
 # Sistema RAG para Análisis de Documentos
 
-Este proyecto implementa un sistema de Retrieval-Augmented Generation (RAG) para procesar y consultar documentos en español, utilizando un modelo de lenguaje local (Mistral 7B) y una base de datos vectorial (Qdrant).
+Este proyecto implementa un sistema de Retrieval-Augmented Generation (RAG) para procesar y consultar documentos en español, utilizando API Groq, LLAMA y una base de datos vectorial (Qdrant).
+
+
+# Video demo
+https://youtu.be/tEzuHhTZ5vc
+
+
+# Link al modelo activo
+
+https://dsstest.streamlit.app/
+
 
 ## Características
 
@@ -58,13 +68,6 @@ Para crear un entorno virtual con Python 3.10.18 utilizando conda, ejecuta este 
 pip install -r requirements.txt
 ```
 
-
-
-# Modelo local 
-
-El modelo local puede ser obtenido de: 
-
-https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistral-7b-instruct-v0.1.Q4_K_M.gguf
 
 
 
