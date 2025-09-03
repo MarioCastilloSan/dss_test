@@ -70,10 +70,10 @@ https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistr
 
 
 # Uso
-Para probrar el script con un modelo local debes ejecutar test.py en tu entorno activo luego de haber instalado las librerías.
+ Para probrar el demo simple local debes ejecutar el dashboard de estrimlit  en tu entorno activo luego de haber instalado las librerías utilizando:
 
 ```bash  
-    python -u .\test.py
+    streamlit run app.py
 ```
 
 # Diagramas de Flujo
