@@ -8,5 +8,6 @@ unstructured==0.12.4
 ragas==0.0.22
 numpy==1.26.2
 pandas==2.1.4
+streamlit==1.49.1
 
 #Python 3.10.18
