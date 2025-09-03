@@ -31,7 +31,7 @@ https://youtu.be/tEzuHhTZ5vc
     ├── data/
     │ ├── vector_db/ # Base de datos vectorial Qdrant
     │ └── geographic_data.json # Datos geográficos para filtrado
-    └── test_pipeline.py # Script de prueba
+    └── test # Script de prueba
 
 
 

@@ -69,10 +69,10 @@ class VectorStore:
         for doc, emb in zip(docs, embeddings):
             payload = {
                 "text": doc.page_content,
-                **doc.metadata,  # keep all metadata: source, page, region, etc.
+                **doc.metadata,  
             }
             point = PointStruct(
-                id=str(uuid.uuid4()),  # unique ID
+                id=str(uuid.uuid4()), 
                 vector=emb,
                 payload=payload,
             )

@@ -19,7 +19,7 @@ class RAGAgent:
     """
 
     def __init__(self):
-        dp = DocumentProcessor(DOCS_DIR)  # only used for embeddings model
+        dp = DocumentProcessor(DOCS_DIR)  
         self.vector_store = VectorStore(dp.embeddings)
         self.llm = LlamaCpp(model_path=MODEL_PATH, **MODEL_CONFIG)
 
@@ -54,7 +54,6 @@ class RAGAgent:
                 "pagina_referencia": "N/A",
             }
 
-        # Build context string
         context = "\n\n".join(
             f"[{i+1}] {d['metadata'].get('source', 'N/A')} (page {d['metadata'].get('page', 'N/A')}):\n{d['page_content']}"
             for i, d in enumerate(docs)
@@ -73,7 +72,6 @@ class RAGAgent:
                 "pagina_referencia": "N/A",
             }
 
-        # Normalize JSON output
         return {
             "respuesta": parsed.get("respuesta", "N/A"),
             "documento_referencia": parsed.get("documento_referencia", "N/A"),
