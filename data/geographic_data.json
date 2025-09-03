@@ -1,0 +1,39 @@
+{
+  "regiones": {
+    "XV": "Región de Arica y Parinacota",
+    "I": "Región de Tarapacá",
+    "II": "Región de Antofagasta",
+    "III": "Región de Atacama",
+    "IV": "Región de Coquimbo",
+    "V": "Región de Valparaíso",
+    "RM": "Región Metropolitana de Santiago",
+    "VI": "Región del Libertador General Bernardo O'Higgins",
+    "VII": "Región del Maule",
+    "VIII": "Región del Biobío",
+    "IX": "Región de La Araucanía",
+    "XIV": "Región de Los Ríos",
+    "X": "Región de Los Lagos",
+    "XI": "Región de Aysén del General Carlos Ibáñez del Campo",
+    "XII": "Región de Magallanes y de la Antártica Chilena",
+    "XVI": "Región de Ñuble"
+  },
+  "regiones_nombres": [
+    "Región de Arica y Parinacota", "Arica y Parinacota", "XV",
+    "Región de Tarapacá", "Tarapacá", "I",
+    "Región de Antofagasta", "Antofagasta", "II",
+    "Región de Atacama", "Atacama", "III",
+    "Región de Coquimbo", "Coquimbo", "IV",
+    "Región de Valparaíso", "Valparaíso", "V",
+    "Región Metropolitana de Santiago", "Metropolitana", "Región Metropolitana", "RM",
+    "Región del Libertador General Bernardo O'Higgins", "Libertador General Bernardo O'Higgins", "O'Higgins", "VI",
+    "Región del Maule", "Maule", "VII",
+    "Región de Ñuble", "Ñuble", "XVI",
+    "Región del Biobío", "Biobío", "VIII",
+    "Región de La Araucanía", "La Araucanía", "IX",
+    "Región de Los Ríos", "Los Ríos", "XIV",
+    "Región de Los Lagos", "Los Lagos", "X",
+    "Región de Aysén del General Carlos Ibáñez del Campo", "Aysén", "XI",
+    "Región de Magallanes y de la Antártica Chilena", "Magallanes", "XII"
+  ]
+
+}
