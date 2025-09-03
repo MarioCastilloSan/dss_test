@@ -13,20 +13,20 @@ Este proyecto implementa un sistema de Retrieval-Augmented Generation (RAG) para
 - Soporte para filtrado por región y comuna
 
 ## Estructura del Proyecto
-├── src/
-│ ├── ingestion_agent.py # Maneja la ingesta de documentos
-│ ├── rag_agent.py # Implementa el sistema RAG
-│ ├── vector_store.py # Interfaz con Qdrant
-│ ├── document_processor.py # Procesamiento de documentos
-│ └── config.py # Configuración del sistema
-├── docs/
-│ ├── unprocessed/ # Documentos sin procesar
-│ └── processed/ # Documentos ya procesados
-├── model/ # Modelo de lenguaje Mistral 7B
-├── data/
-│ ├── vector_db/ # Base de datos vectorial Qdrant
-│ └── geographic_data.json # Datos geográficos para filtrado
-└── test_pipeline.py # Script de prueba
+    ├── src/
+    │ ├── ingestion_agent.py # Maneja la ingesta de documentos
+    │ ├── rag_agent.py # Implementa el sistema RAG
+    │ ├── vector_store.py # Interfaz con Qdrant
+    │ ├── document_processor.py # Procesamiento de documentos
+    │ └── config.py # Configuración del sistema
+    ├── docs/
+    │ ├── unprocessed/ # Documentos sin procesar
+    │ └── processed/ # Documentos ya procesados
+    ├── model/ # Modelo de lenguaje Mistral 7B
+    ├── data/
+    │ ├── vector_db/ # Base de datos vectorial Qdrant
+    │ └── geographic_data.json # Datos geográficos para filtrado
+    └── test_pipeline.py # Script de prueba
 
 
 
@@ -71,6 +71,10 @@ https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistr
 
 # Uso
 Para probrar el script con un modelo local debes ejecutar test.py en tu entorno activo luego de haber instalado las librerías.
+
+```bash  
+    python -u .\test.py
+```
 
 # Diagramas de Flujo
 
