@@ -29,12 +29,15 @@ class RAGAgent:
             f"Context:\n{context}\n\n"
             f"Question: {question}\n\n"
             "Instructions:\n"
-            "1) Answer concisely in Spanish.\n"
-            "2) Return ONLY a JSON object with keys: "
+            "1) Provide a detailed answer in Spanish, integrating information from ALL relevant fragments.\n"
+            "2) Summarize clearly the projects where 'chinchilla chinchilla' was relevant.\n"
+            "3) Always return ONLY a JSON object with keys: "
             '"respuesta", "documento_referencia", "pagina_referencia".\n'
-            "3) If information is missing, use 'N/A'.\n\n"
+            "4) If multiple fragments are found, merge them into a single comprehensive 'respuesta'.\n"
+            "5) If information is missing, use 'N/A'.\n\n"
             "JSON:\n"
         )
+
 
     def query(self, question: str, region: Optional[str] = None, k: int = 3) -> Dict[str, Any]:
         """
