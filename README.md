@@ -30,15 +30,47 @@ Este proyecto implementa un sistema de Retrieval-Augmented Generation (RAG) para
 
 
 
-Configuración
-El sistema se configura a través del archivo src/config.py. Las opciones principales incluyen:
+# Configuración
+    El sistema se configura a través del archivo src/config.py. Las opciones principales incluyen:
 
-MODEL_PATH: Ruta al modelo de lenguaje Mistral 7B
-DOCS_DIR: Directorio de documentos
-VECTOR_DB_PATH: Ruta a la base de datos vectorial
-CHUNK_SIZE: Tamaño de los fragmentos de texto (por defecto: 1000)
-CHUNK_OVERLAP: Superposición entre fragmentos (por defecto: 200)
-EMBEDDING_MODEL: Modelo de embeddings (por defecto: "sentence-transformers/all-MiniLM-L6-v2")
+    MODEL_PATH: Ruta al modelo de lenguaje Mistral 7B
+    DOCS_DIR: Directorio de documentos
+    VECTOR_DB_PATH: Ruta a la base de datos vectorial
+    CHUNK_SIZE: Tamaño de los fragmentos de texto (por defecto: 1000)
+    CHUNK_OVERLAP: Superposición entre fragmentos (por defecto: 200)
+    EMBEDDING_MODEL: Modelo de embeddings (por defecto: "sentence-transformers/all-MiniLM-L6-v2")
+
+
+# Creación del Entorno Virtual
+Para crear un entorno virtual con Python 3.10.18 utilizando conda, ejecuta este comando en tu terminal:
+
+```bash 
+    conda create --name nombre-entorno python=3.10.18
+```
+
+```bash 
+    conda activate nombre-entorno
+```
+
+
+# Instalación de Dependencias
+``` bash 
+pip install -r requirements.txt
+```
+
+
+
+# Modelo local 
+
+El modelo local puede ser obtenido de: 
+
+https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistral-7b-instruct-v0.1.Q4_K_M.gguf
+
+
+
+
+# Uso
+Para probrar el script con un modelo local debes ejecutar test.py en tu entorno activo luego de haber instalado las librerías.
 
 # Diagramas de Flujo
 
