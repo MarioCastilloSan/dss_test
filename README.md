@@ -29,21 +29,24 @@ https://dsstest.streamlit.app/
     │ ├── vector_store.py # Interfaz con Qdrant
     │ ├── document_processor.py # Procesamiento de documentos
     │ └── config.py # Configuración del sistema
+    │ └── llm_factory.py # seleccion del modelo
+    
+
     ├── docs/
     │ ├── unprocessed/ # Documentos sin procesar
     │ └── processed/ # Documentos ya procesados
-    ├── model/ # Modelo de lenguaje Mistral 7B
+    ├── model/ # Modelo de lenguaje Mistral 7B en caso de querer usarse
     ├── data/
     │ ├── vector_db/ # Base de datos vectorial Qdrant
     │ └── geographic_data.json # Datos geográficos para filtrado
-    └── test_pipeline.py # Script de prueba
+    └── 
 
 
 
 # Configuración
     El sistema se configura a través del archivo src/config.py. Las opciones principales incluyen:
 
-    MODEL_PATH: Ruta al modelo de lenguaje Mistral 7B
+    MODEL_PATH: Ruta al modelo de lenguaje Mistral 7B (modo local, no dashboard), revisar rama main para más información)
     DOCS_DIR: Directorio de documentos
     VECTOR_DB_PATH: Ruta a la base de datos vectorial
     CHUNK_SIZE: Tamaño de los fragmentos de texto (por defecto: 1000)
